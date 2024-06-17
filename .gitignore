@@ -1,0 +1,13 @@
+node_modules/*
+
+*/node_modules
+
+## 打包文件
+
+exportCjs
+exportMjs
+exportTypes
+
+test/out
+
+.DS_Store
