@@ -2,6 +2,8 @@
 
 A simple Vue UI library construction tool (At least for now, it's like this)
 
+**This package command is only applicable to projects created using this package and the directory structure needs to meet the package settings**
+
 <table><tr>
 <td><a href="https://github.com/lmssee/iuuu/blob/main/README.md"  target="_self">English</a></td>
 <td><a href="https://github.com/lmssee/iuuu/blob/main/自述文件.md"  target="_self">中文</a></td>
@@ -20,7 +22,7 @@ npm install  --global  iuuu
 use you terminal and input :
 
 ```sh
-npm iuuu  init
+npx iuuu  init
 ```
 
 If you install globally, you can also use the following command
@@ -61,11 +63,11 @@ After generating the project, you can `cd <project name>` enter the project root
 
 The component uses [Vue's jsx](https://cn.vuejs.org/guide/extras/render-function.html) writing style, similar to template writing style
 
-### library ( component's home)
+### src (source component's home)
 
-The root directory of the component, which exposes the component to the outside through `index. ts`. The components are located in the `library` folder, and you can add new components by using the command `npx iuuu c`.
+The root directory of the component, which exposes the component to the outside through `index. ts`. The components are located in the `src` folder, and you can add new components by using the command `npx iuuu c`.
 
-The ` npx iuuu c` command will create a new component with the name you entered in the `src` directory (please follow the naming convention for new components, separate words with `-`), and automatically add exports to `library/src/index.ts`. If you want to overwrite the component after writing some code, you can overwrite it again by using the command `npx iuuu c <component name>`.
+The ` npx iuuu c` command will create a new component with the name you entered in the `src` directory (please follow the naming convention for new components, separate words with `-`), and automatically add exports to `src/index.ts`. If you want to overwrite the component after writing some code, you can overwrite it again by using the command `npx iuuu c <component name>`.
 
 ### static
 

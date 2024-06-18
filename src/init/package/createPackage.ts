@@ -27,13 +27,13 @@ export function createPackage() {
             },
         },
         scripts: {
-            build: `echo '构建部分' && vite build && tsc -p tsconfig.types.json`,
+            build: `echo '构建部分' && vite build && tsc -p tsconfig.types.json && npx iuuu mc`,
             create: "echo  '添加一个组件' &&  npx iuuu create",
             clean: 'npx ixxx rm  node_modules package-lock.json && npm install',
             clear: 'npx ixxx rm out types',
             dev: "echo '测试' && vite",
             prettier: 'npx prettier . --write',
-            up: `echo \'更新 npm 包\' && npx ixxx up -d`,
+            up: `echo \'更新 npm 包\' && npx ixxx up -n`,
         },
         files: ['out', 'types'],
         repository: {
