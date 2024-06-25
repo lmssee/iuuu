@@ -3,11 +3,11 @@ import initData from '../initData';
 
 /** 添加 html  */
 export default function createIndexHtml() {
-    const { name } = initData;
-    /** 生成根 html */
-    writeFileSync(
-        `${name}/index.html`,
-        `<!DOCTYPE html>
+  const { name } = initData;
+  /** 生成根 html */
+  writeFileSync(
+    `${name}/index.html`,
+    `<!DOCTYPE html>
   <html lang="zh-cn">
     <head>
       <meta charset="UTF-8" />
@@ -21,5 +21,5 @@ export default function createIndexHtml() {
     </body>
   </html>
   `,
-    );
+  );
 }

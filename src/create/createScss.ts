@@ -2,11 +2,11 @@ import { writeFileSync } from 'node:fs';
 import createData from './createData';
 
 export function createScss() {
-    const { targetDir, targetName, className } = createData;
-    /** 写入样式 */
-    writeFileSync(
-        `${targetDir}/${targetName}.scss`,
-        `.${className}_class {
+  const { targetDir, targetName, className } = createData;
+  /** 写入样式 */
+  writeFileSync(
+    `${targetDir}/${targetName}.scss`,
+    `.${className}_class {
   position: relative;
   width: auto;
   padding: 4px 16px;
@@ -42,5 +42,5 @@ to {
   text-shadow: 1px 1px 3px #0ff, -1px -1px 3px #0ff, -1px 1px 3px #0ff, 1px -1px 3px #0ff;
   }
 }`,
-    );
+  );
 }

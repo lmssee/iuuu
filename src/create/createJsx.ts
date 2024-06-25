@@ -3,17 +3,24 @@ import createData from './createData';
 
 /** 导出组件的 jsx 主文件  */
 export function createJsx() {
-    const { targetDir, targetName, className } = createData;
-    // 写入组件的 jsx 文件
-    writeFileSync(
-        `${targetDir}/${targetName}.tsx`,
-        `import  {defineComponent, ref} from 'vue';
+  const { targetDir, targetName, className } = createData;
+  // 写入组件的 jsx 文件
+  writeFileSync(
+    `${targetDir}/${targetName}.tsx`,
+    `import  {defineComponent, ref} from 'vue';
 import type { App } from "vue";
 import './${targetName}.scss';
 
 /**  组件 ${targetName} 内容部分   */
 const ${targetName}  =  defineComponent({
 name:"${targetName}",
+__name:"${targetName}",
+/**
+ *  这里是该组件的被调参数，将作为 setUp 的回调第一实参的名 
+ */
+// props:{},
+/** 导出的默认事件  */
+// emits:[], 
 setup(props, ctx) {
     /** 点击计数  */
     const clickCount = ref(0);
@@ -34,12 +41,14 @@ setup(props, ctx) {
 }
 });
 
+/** 安装器  */
 ${targetName}.install = function (app: App) {
-app.component(${targetName}.name as string, ${targetName});
-return app;
+    app.component(${targetName}.name as string, ${targetName});
+    return app;
 };
+ 
 
 export { ${targetName} };
 `,
-    );
+  );
 }

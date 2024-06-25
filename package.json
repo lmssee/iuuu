@@ -1,88 +1,101 @@
 {
-    "name": "iuuu",
-    "version": "0.0.2",
-    "description": "a simple  cli for create vue library mode",
-    "type": "module",
-    "main": "exportCjs/index.cjs",
-    "module": "exportMjs/index.mjs",
-    "typings": "exportTypes/index.d.ts",
-    "scripts": {
-        "dev": "npx  ihot",
-        "b": "rollup --config rollup.config.js && tsc -p tsconfig.types.json",
-        "build": "npx ixxx rm exportMjs exportTypes run b",
-        "prettier": "npx prettier . --write",
-        "test": "rollup --config rollup.config.test.js",
-        "up": "npx ixxx up -n"
-    },
-    "exports": {
-        ".": {
-            "import": {
-                "default": "./exportMjs/index.mjs",
-                "types": "./exportTypes/index.d.ts"
-            },
-            "require": {
-                "default": "./exportCjs/index.cjs",
-                "types": "./exportTypes/index.d.ts"
-            }
-        }
-    },
-    "files": [
-        "exportCjs",
-        "exportMjs",
-        "exportTypes"
-    ],
-    "author": "lmssee <lmssee@outlook.com>  (https://lmssee.com)",
-    "license": "ISC",
-    "repository": {
-        "type": "git",
-        "url": "git+https://github.com/lmssee/iuuu.git"
-    },
-    "keywords": [
-        "letmiseesee",
-        "lmssee",
-        "is-mi",
-        "ismi",
-        "iuuu",
-        "one-click-construction"
-    ],
-    "homepage": "https://lmssee.github.io/iuuu",
-    "bugs": {
-        "url": "https://github.com/lmssee/iuuu/issues",
-        "email": "lmssee@outlook.com"
-    },
-    "publishConfig": {
-        "access": "public",
-        "registry": "https://registry.npmjs.org/"
-    },
-    "devDependencies": {
-        "@rollup/plugin-commonjs": "^25.0.8",
-        "@rollup/plugin-json": "^6.1.0",
-        "@rollup/plugin-node-resolve": "^15.2.3",
-        "@rollup/plugin-terser": "^0.4.4",
-        "@rollup/plugin-typescript": "^11.1.6",
-        "@types/node": "^20.14.4",
-        "@vitejs/plugin-vue": "^5.0.5",
-        "@vitejs/plugin-vue-jsx": "^4.0.0",
-        "prettier": "^3.3.2",
-        "rollup-plugin-cleanup": "^3.2.1",
-        "rollup-plugin-copy": "^3.5.0",
-        "rollup-plugin-postcss": "^4.0.2",
-        "sass": "^1.77.6",
-        "tslib": "^2.6.3",
-        "typescript": "^5.4.5",
-        "vite": "^5.3.1",
-        "vite-plugin-dts": "^3.9.1",
-        "vue": "^3.4.29",
-        "vue-router": "^4.3.3",
-        "vue-tsc": "^2.0.21"
-    },
-    "dependencies": {
-        "axios": "^1.7.2",
-        "ismi-command": "^0.0.7",
-        "ismi-js-tools": "^0.0.2",
-        "ismi-node-tools": "^0.0.6"
-    },
-    "bin": {
-        "iuuu": "./exportBin/index.js"
+  "name": "iuuu",
+  "version": "0.0.2",
+  "description": "a simple  cli for create vue library mode",
+  "type": "module",
+  "main": "exportCjs/index.cjs",
+  "module": "exportMjs/index.mjs",
+  "typings": "exportTypes/index.d.ts",
+  "scripts": {
+    "dev": "npx  ihot",
+    "b": "npx ixxx cls && rollup --config rollup.config.js && tsc -p tsconfig.types.json",
+    "build": "npx ixxx cls  rm exportMjs exportTypes cls  run b ",
+    "prettier": "npx ixxx cls &&  npx prettier . --write",
+    "test": "rollup --config rollup.config.test.js",
+    "up": "npx ixxx up -n"
+  },
+  "exports": {
+    ".": {
+      "import": {
+        "default": "./exportMjs/index.mjs",
+        "types": "./exportTypes/index.d.ts"
+      },
+      "require": {
+        "default": "./exportCjs/index.cjs",
+        "types": "./exportTypes/index.d.ts"
+      }
     }
+  },
+  "files": [
+    "exportCjs",
+    "exportMjs",
+    "exportTypes"
+  ],
+  "author": "lmssee <lmssee@outlook.com>  (https://lmssee.com)",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lmssee/iuuu.git"
+  },
+  "keywords": [
+    "letmiseesee",
+    "lmssee",
+    "is-mi",
+    "ismi",
+    "iuuu",
+    "one-click-construction"
+  ],
+  "homepage": "https://lmssee.github.io/iuuu",
+  "bugs": {
+    "url": "https://github.com/lmssee/iuuu/issues",
+    "email": "lmssee@outlook.com"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^25.0.8",
+    "@rollup/plugin-json": "^6.1.0",
+    "@rollup/plugin-node-resolve": "^15.2.3",
+    "@rollup/plugin-terser": "^0.4.4",
+    "@rollup/plugin-typescript": "^11.1.6",
+    "@rushstack/eslint-patch": "^1.10.3",
+    "@tsconfig/node20": "^20.1.4",
+    "@types/jsdom": "^21.1.7",
+    "@types/node": "^20.14.8",
+    "@vitejs/plugin-vue": "^5.0.5",
+    "@vitejs/plugin-vue-jsx": "^4.0.0",
+    "@vue/eslint-config-prettier": "^9.0.0",
+    "@vue/eslint-config-typescript": "^13.0.0",
+    "@vue/test-utils": "^2.4.6",
+    "@vue/tsconfig": "^0.5.1",
+    "axios": "^1.7.2",
+    "eslint": "^8.57.0",
+    "eslint-plugin-vue": "^9.26.0",
+    "jsdom": "^24.1.0",
+    "pinia": "^2.1.7",
+    "prettier": "^3.3.2",
+    "rollup-plugin-cleanup": "^3.2.1",
+    "rollup-plugin-copy": "^3.5.0",
+    "rollup-plugin-postcss": "^4.0.2",
+    "sass": "^1.77.6",
+    "tslib": "^2.6.3",
+    "typescript": "^5.5.2",
+    "vite": "^5.3.1",
+    "vite-plugin-dts": "^3.9.1",
+    "vite-plugin-vue-devtools": "^7.3.4",
+    "vitest": "^1.6.0",
+    "vue": "^3.4.29",
+    "vue-router": "^4.4.0",
+    "vue-tsc": "^2.0.22"
+  },
+  "dependencies": {
+    "ismi-command": "^0.0.7",
+    "ismi-js-tools": "^0.0.2",
+    "ismi-node-tools": "^0.0.9"
+  },
+  "bin": {
+    "iuuu": "./exportBin/index.js"
+  }
 }

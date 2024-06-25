@@ -1,7 +1,6 @@
-import { t } from 'ismi-js-tools';
+import { Color } from 'ismi-node-tools';
 
-const { stdout } = process;
-
+/**  打印消息 */
 export default function printSome(message: string) {
-    console.log(new Date().toLocaleTimeString(), message);
+  console.log(Color.random(new Date().toLocaleTimeString()), message);
 }
